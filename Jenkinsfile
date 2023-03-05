@@ -1,16 +1,12 @@
 def gv
 pipeline {
     agent any
-    tools {
-        maven 'maven-3.9'
-    }
     stages {
-            stage("init") {
+            stage("deploy frontend") {
                 steps {
                     sh '''
-                    npm --version
-                    ansible --version
-                    echo "This is a test..."
+                    cd frontend
+                    npm i
                     '''
                 }
             }
