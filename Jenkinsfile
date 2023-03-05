@@ -7,7 +7,10 @@ pipeline {
     stages {
             stage("init") {
                 steps {
-                    sh "npm --version"
+                    sh '''
+                    npm --version
+                    ansible --version
+                    '''
                 }
             }
     }
