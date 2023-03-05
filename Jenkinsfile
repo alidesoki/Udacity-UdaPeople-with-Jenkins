@@ -10,7 +10,7 @@ pipeline {
                     sh '''
                     npm --version
                     ansible --version
-                    echo "This is a test.."
+                    echo "This is a test..."
                     '''
                 }
             }
